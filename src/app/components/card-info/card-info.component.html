@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <img class="card-img-top" [src]="card.image">
+        <div class="card-body">
+          {{ card.name }}
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <h1>{{ card.name}}</h1>
+      <hr>
+      <h2>Description</h2>
+      <p>{{ card.description }}</p>
+      <hr>
+      <h2>Keywords</h2>
+      <ul>
+        <li>Upright: {{ card.keywords.upright }}</li>
+        <li>Reversed: {{ card.keywords.reversed }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
