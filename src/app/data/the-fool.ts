@@ -1,10 +1,11 @@
 import {TarotCard} from "../interfaces/tarot-card";
 import {CardPosition} from "../interfaces/card-position";
 import {Predictions} from "../interfaces/predictions";
+import {Arcana} from "../interfaces/arcana";
 
 export class TheFool implements TarotCard {
 
-  arcana: string = "Major";
+  arcana: Arcana = Arcana.MAJOR;
 
   name: string = "The Fool";
 

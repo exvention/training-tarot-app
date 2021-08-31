@@ -1,15 +1,45 @@
-<div class="container">
-  <div class="row">
-    <div class="col-2" *ngFor="let card of tarotCards">
-      <a href="cards/{{card.id}}">
-        <div class="card">
-          <img class="card-img-top" [src]="card.image">
-          <div class="card-body">
-            {{ card.name }}
-          </div>
-        </div>
-      </a>
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Tarot Cards</h1>
+      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+      <p>
+        <a href="#" class="btn btn-lg btn-primary my-2">Tarot Readings</a>
+        &nbsp;
+        <a href="#" class="btn btn-lg btn-outline-secondary my-2">Learn More</a>
+      </p>
     </div>
+  </div>
+</section>
+
+<div class="py-5 bg-light">
+  <div class="container p-3">
+    <h1 class="text-center mb-5">Major Arcana</h1>
+      <div class="row">
+        <div class="col-2" *ngFor="let card of majorArcana">
+          <a href="cards/{{card.id}}" class="text-decoration-none text-black">
+            <div class="card">
+              <img class="card-img-top" [src]="card.image">
+            </div>
+          </a>
+        </div>
+      </div>
   </div>
 </div>
 
+<div class="py-5 bg-light">
+  <div class="container p-3">
+    <h1 class="text-center mb-5">Minor Arcana (Cups)</h1>
+    <div class="row">
+      <!-- TODO: Display List of Minor Arcana Card -->
+      <div class="col-2" *ngFor="let card of cups">
+        <a href="cards/{{card.id}}" class="text-decoration-none text-black">
+          <div class="card">
+            <img class="card-img-top" [src]="card.image">
+          </div>
+        </a>
+      </div>
+      <!-- End TODO -->
+    </div>
+  </div>
+</div>

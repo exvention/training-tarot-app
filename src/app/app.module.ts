@@ -13,7 +13,7 @@ import {InMemoryDataService} from "./services/in-memory-data.service";
   declarations: [
     AppComponent,
     CardListComponent,
-    CardInfoComponent
+    CardInfoComponent,
   ],
   imports: [
     BrowserModule,

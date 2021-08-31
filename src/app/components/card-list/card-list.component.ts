@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TarotCardsService} from "../../services/tarot-cards.service";
 import {TarotCard} from "../../interfaces/tarot-card";
+import {Arcana} from "../../interfaces/arcana";
 
 @Component({
   selector: 'app-card-list',
@@ -9,14 +10,14 @@ import {TarotCard} from "../../interfaces/tarot-card";
 })
 export class CardListComponent implements OnInit {
 
-  tarotCards!: TarotCard[];
+  majorArcana!: TarotCard[];
+  cups!: TarotCard[];
 
   constructor(private tarotCardsService: TarotCardsService) { }
 
   ngOnInit(): void {
-    this.tarotCardsService.list().subscribe((cards: TarotCard[]) => {
-      this.tarotCards = cards;
-    })
+    this.tarotCardsService.listMajorArcana().subscribe((cards: TarotCard[]) => this.majorArcana = cards);
+    this.tarotCardsService.listCups().subscribe((cards: TarotCard[]) => this.cups = cards);
   }
 
 }
